@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="title" content="Rustie - Explore the world of Green Language">
+    <meta name="description" content="Rustie - Explore the world of Green Language with an interactive game to stream the album.">
+    <meta name="keywords" content="Rustie, Green Language, Hunter Loftis, Warp Records">
+    <title>Rustie - Green Language</title>
+    <script src="./greendreams.js"></script>
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: black;
+      }
+      body {
+        overflow: hidden;
+        font-family: sans-serif;
+        font-size: 20px;
+        color: white;
+      }
+      #game {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+      }
+      #footer {
+        width: 100%;
+        margin: 0 auto 0 auto;
+        bottom: 0px;
+        position: absolute;
+        z-index: 15;
+        padding: 1em;
+      }
+      canvas {
+        image-rendering: -webkit-optimize-contrast;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+      .button--start {
+        text-transform: uppercase;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 20px 40px;
+        font: inherit;
+        font-size: 28px;
+        border: 0px;
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        opacity: 0.75;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px;
+        top: 60%;
+        display: block;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game">
+      <script>
+        var game = new GreenDreams(document.getElementById('game'), {
+            start: './images/start.jpg',
+            end: './images/end.jpg'
+        });
+      </script>
+    </div>
+  </body>
+</html>
