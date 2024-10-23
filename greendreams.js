@@ -212,7 +212,6 @@
                       this.emit("ready");
                   };
                   Controls.prototype.onLockMove = function (e) {
-                    console.log('e', e)
                       this.state.turn += e.dx * this.sensitivity;
                       this.state.tilt = bound(this.state.tilt - e.dy * this.sensitivity, -Math.PI * 0.4, Math.PI * 0.4);
                   };
@@ -788,7 +787,6 @@
                     document.exitPointerLock();
                   };
                   PointerLock.prototype.onChange = function () {
-                    console.log('change?');
                       if (document.pointerLockElement === this.el) {
                           if (this.locked) return;
                           this.locked = true;
